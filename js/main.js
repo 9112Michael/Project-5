@@ -1,3 +1,13 @@
+//https://developers.google.com/web/fundamentals/primers/service-workers/registration
+
+//Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+    console.log('Service Worker is running!');
+  });
+}
+
 let restaurants,
   neighborhoods,
   cuisines
