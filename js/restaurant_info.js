@@ -1,3 +1,18 @@
+//https://developers.google.com/web/fundamentals/primers/service-workers/registration
+
+//Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+    //Successful registration
+      console.log('ServiceWorker registration successful with scope:', registration.scope);
+    }, function(err) {
+      //Registration failed
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
 let restaurant;
 var newMap;
 
@@ -89,6 +104,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.setAttribute('alt', `Photograph of ${restaurant.name}`);
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
