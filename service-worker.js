@@ -65,8 +65,6 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-
-
 //Update service worker
 self.addEventListener('activate', (event) => {
   event.waitUntil(
