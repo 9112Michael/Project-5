@@ -34,13 +34,14 @@
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
-    <section  aria-label="map to restaurant" tabindex="0" id="map-container">
+    <section  aria-label="Map to restaurant" role="application" tabindex="0" id="map-container">
+      //https://www.w3.org/TR/wai-aria/#application
       <div id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section  aria-label="details about restaurant" tabindex="0" id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
+      <h2 id="restaurant-name"></h2>
       <img id="restaurant-img" alt="Photograph of Restaurant">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
